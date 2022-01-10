@@ -1,8 +1,15 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  draw :madmin
+  resources :projects, only: [:index, :show]
+  resources :blog_posts, only: [:index, :show]
+  mount Commontator::Engine => '/commontator'
+
   get '/privacy', to: 'home#privacy'
   get '/terms', to: 'home#terms'
+  get '/about', to: 'home#about'
+  
 authenticate :user, lambda { |u| u.admin? } do
   mount Sidekiq::Web => '/sidekiq'
 

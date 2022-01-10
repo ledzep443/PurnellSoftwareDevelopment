@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_one_attached :avatar
   has_person_name
   has_noticed_notifications
+  acts_as_commontator
 
   has_many :notifications, as: :recipient, dependent: :destroy
   has_many :services

@@ -1,0 +1,31 @@
+
+
+
+<div class="text-center">
+    <h1>My Projects</h1>
+  </div>
+
+  
+
+
+
+    <div class="container">
+      <% @projects.each do |project| %>
+          <div class="card col-md-4">
+            <%= image_tag project.screenshot %>
+            <div class="card-body text-center">
+                <h3><%= project.title %></h3>
+                <h5>Written by: Jimmy Purnell</h5>
+                <h6>Created on: <%= project.created_at %></h6>
+                <h6>Language: <%= project.languages %></h6>
+                <h6>Framework: <%= project.framework %></h6>
+                <p class="trix-content"><%= project.description.to_plain_text.truncate(35) %></p>
+          
+          
+              <%= link_to 'Show More', project, :class => "btn btn-secondary" %>
+            </div>
+          </div>
+      <% end %>
+  </div>
+      
+    

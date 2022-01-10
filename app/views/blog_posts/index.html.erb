@@ -1,0 +1,24 @@
+<div class="text-center">
+    <h1>Blog</h1>
+  </div>
+
+  
+
+
+
+    
+      <% @blog_posts.each do |blog_post| %>
+          <div class="card col-md-4">
+            <%= image_tag blog_post.photo %>
+            <div class="card-body text-center">
+                <h3><%= blog_post.title %></h3>
+                <h5>Written by: Jimmy Purnell</h5>
+                <h6>Created on: <%= blog_post.created_at %></h6>
+                <p class="trix-content"><%= blog_post.post.to_plain_text.truncate(65) %><p>
+          
+          
+              <%= link_to 'Show More', blog_post, :class => "btn btn-secondary" %>
+            </div>
+          </div>
+        <% end %>
+      

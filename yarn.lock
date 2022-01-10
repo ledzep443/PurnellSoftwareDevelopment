@@ -30,7 +30,14 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.1.4.tgz#c3c5a9f8302c429af9722b6c50ab48049016d2a3"
   integrity sha512-0LmSKJTuo2dL6BQ+9xxLnS9lbkyfz2mBGeBnQ2J7o9Bn0l0q+ZC6VuoZMZZXPvABI4QT7Nfknv5WhfKYL+boew==
 
-"@rails/activestorage@^7.0.1":
+"@rails/actiontext@^7.0.1":
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/@rails/actiontext/-/actiontext-7.0.1.tgz#e45d491b959092c45d4eacfae212369419685d9b"
+  integrity sha512-O9relaASXsUj8JavDLW16hIBGtiDDIDiQhQY4MKDpk90J9vwzJfswKIABRFd8WK3nF8oKvZY27x2J0pdXt4wWA==
+  dependencies:
+    "@rails/activestorage" ">= 7.0.0-alpha1"
+
+"@rails/activestorage@>= 7.0.0-alpha1", "@rails/activestorage@^7.0.1":
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/@rails/activestorage/-/activestorage-7.0.1.tgz#207f445b684a210a9673b9f7177d83fa9e199088"
   integrity sha512-086z2aymPsfJITR8tbXjMr5OipfoFcoWJn5y5krXx3zo9zCEBQjSVR/tS2oHQGCSxIsF0E7a9Ds1cFXrnEdSKQ==

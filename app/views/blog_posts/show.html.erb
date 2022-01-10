@@ -1,0 +1,18 @@
+<div class="page-header text-center">
+  
+  
+  <h1><%= @blog_post.title %></h1>
+  <h3>By: <%= @blog_post.author %></h3>
+  <hr/>
+    <%= image_tag @blog_post.photo, :style => "max-width: 80vw", class: "mx-auto d-block" %>
+
+</div>
+<div class="text-center">
+  <%= link_to blog_posts_path, class: 'btn btn-secondary' do %>
+    Back to index
+  <% end %>
+  <p><%= @blog_post.post %></p>
+  <div class="text-center">
+    <%= commontator_thread(@blog_post) %>
+  </div>
+</div>
