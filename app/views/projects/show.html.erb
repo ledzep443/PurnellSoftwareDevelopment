@@ -1,22 +1,23 @@
-<div class="page-header">
-  <%= link_to projects_path, class: 'btn btn-default' do %>
-    All Projects
-  <% end %>
-  <%= link_to edit_project_path(@project), class: 'btn btn-primary' do %>
-    Edit
-  <% end %>
-  <h1>Show project</h1>
+<div class="page-header items-center">
+  
+  
+  <h1 class="text-center"><%= @project.title %></h1>
+  <hr/>
+  <%= image_tag @project.screenshot, :style => "max-width: 80vw", class: "mx-auto d-block" %>
+  <hr/>
 </div>
+<div class="text-center">
+  <h6>Languages: <%= @project.languages %></h6>
+  <h6>Framework: <%= @project.framework %></h6>
+  <p><%= @project.description %></p>
+  <div class="col text-right">
+    <a href="<%= @project.url %>" class="btn btn-info">View site</a>
+    <a href="<%= @project.github %>" class="btn btn-secondary">View code</a>
+      <%= link_to "Back To All Projects", projects_path, class: 'btn btn-success'%>
 
-<dl class="dl-horizontal">
-  <dt>Name:</dt>
-  <dd><%= @project.name %></dd>
-  <dt>Url:</dt>
-  <dd><%= @project.url %></dd>
-  <dt>Github:</dt>
-  <dd><%= @project.github %></dd>
-  <dt>Languages:</dt>
-  <dd><%= @project.languages %></dd>
-  <dt>Framework:</dt>
-  <dd><%= @project.framework %></dd>
-</dl>
+  </div>
+</div>
+<hr/>
+<%= commontator_thread(@project) %>
+<hr/>
+
