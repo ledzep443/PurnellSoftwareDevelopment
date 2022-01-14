@@ -3,7 +3,7 @@ lock "~> 3.16.0"
 
 set :application, "PurnellSoftwareDevelopment"
 set :repo_url, "git@github.com:ledzep443/PurnellSoftwareDevelopment.git"
-
+set :branch, :main
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
