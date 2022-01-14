@@ -88,5 +88,5 @@ test:
 production:
   <<: *default
   database: PurnellSoftwareDevelopment_production
-  username: PurnellSoftwareDevelopment
-  password: <%= ENV["PURNELLSOFTWAREDEVELOPMENT_DATABASE_PASSWORD"] %>
+  username: jimmy
+  password: <%= ENV["DATABASE_PASSWORD"] %>
