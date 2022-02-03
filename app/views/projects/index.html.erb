@@ -10,14 +10,16 @@
 
 
     <div class="container">
-      <% @projects.each do |project| %>
-          <div class="card col-md-4">
-            <%= link_to project do %>
-              <%= image_tag project.screenshot, :class => "col-md-12 img-fluid" %>
-            <% end %>
-            
-          </div>
-      <% end %>
+      <div class="row">
+        <% @projects.each do |project| %>
+            <div class="card col-md-4">
+              <%= link_to project do %>
+                <%= image_tag project.screenshot, :class => "col-md-12 img-fluid" %>
+              <% end %>
+              
+            </div>
+        <% end %>
+      </div>
   </div>
       
     
