@@ -9,7 +9,6 @@
 server "83.136.219.172", user: "jimmy", roles: %w{app db web}
 
 
-
 # role-based syntax
 # ==================
 

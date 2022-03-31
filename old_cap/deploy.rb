@@ -1,14 +1,13 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.17.0"
+lock "~> 3.16.0"
 
-set :application, "purnellsoftwaredevelopment"
+set :application, "PurnellSoftwareDevelopment"
 set :repo_url, "git@github.com:ledzep443/PurnellSoftwareDevelopment.git"
-
+set :branch, :main
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, "/var/www/my_app_name"
 set :deploy_to, "/home/jimmy/#{fetch :application}"
 
 # Default value for :format is :airbrussh.
@@ -22,10 +21,8 @@ set :deploy_to, "/home/jimmy/#{fetch :application}"
 # set :pty, true
 
 # Default value for :linked_files is []
-# append :linked_files, "config/database.yml", 'config/master.key'
-
+append :linked_files, "config/master.key"
 # Default value for linked_dirs is []
-# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "tmp/webpacker", "public/system", "vendor", "storage"
 set :linked_dirs, fetch(:linked_dirs, []).push("log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", ".bundle", "public/system", "public/uploads")
 
 # Default value for default_env is {}
