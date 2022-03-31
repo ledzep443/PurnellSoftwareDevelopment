@@ -21,7 +21,7 @@ set :deploy_to, "/home/jimmy/#{fetch :application}"
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/master.key"
+#append :linked_files, "config/master.key"
 # Default value for linked_dirs is []
 set :linked_dirs, fetch(:linked_dirs, []).push("log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", ".bundle", "public/system", "public/uploads")
 
