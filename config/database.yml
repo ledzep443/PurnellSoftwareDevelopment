@@ -88,14 +88,8 @@ test:
 #
 production:
   <<: *default
-  database: PurnellSoftwareDevelopment
-  host: localhost
-  username: postgres
-  password: <%= ENV["DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
 
 staging:
   <<: *default
-  database: PurnellSoftwareDevelopment
-  host: localhost
-  username: postgres
-  password: <%= ENV["DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
